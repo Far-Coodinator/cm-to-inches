@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert cm to inches</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cl">
+    <div class="box">
+        <h2 class="heading">
+            cm to inches
+        </h2>
+        <input type="number" id="cm-val" placeholder="Enter cm here ">
+        <div class="but">
+            <button type="submit" onclick="convert()">convert to inches</button>
+        </div>
+        <div id="resulte">
+            
+        </div>
+    </div>
+</div>
+<script>
+    function convert(){
+    const cmvalue = Number(document.getElementById("cm-val").value)
+    const inchvalue = cmvalue/2.54
+    const resulte = document.getElementById("resulte")
+    resulte.innerHTML = inchvalue.toFixed(3) + " inches "
+    }
+
+    // ----------IMPORTANT NOTES-------------
+    /*
+    first i store the value of the input in variable (cmvalue) then 
+    i store the inche-value by dividing (cmvalue) / 2.54 in variable (inchvalue) then
+    almost i got the variable of inches
+
+    so i should show the value in my id resulte div so 
+    i store the element resulte in variable ( resulte )
+    then i stored every things what i want ........
+    now in my Element "resulte" I showed my value of inches by giving inner HTML 
+    and -- 
+    (.toFixed()) atribute thats mean how many number want to show after the point 
+    example  
+    = inchesvalue.toFixed(2)
+    then 2.34 
+    and i added the word inches by giving + symbol
+    ok alhamdhu lillah............
+    */
+
+   /*
+   i used the function convert()
+   because when click the button that time only the following function it will work 
+   i added name to button by giving (onclick="")
+   and then i mention the name in my script .
+   */
+
+//    i used the ( const ) because i don't want to change the variable again here......
+    
+</script>
+</body>
+</html>
